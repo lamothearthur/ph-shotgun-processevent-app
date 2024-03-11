@@ -1,12 +1,12 @@
 {
-    "name": "URL Normalizer",
-    "url": "https://github.com/MarkBennett/posthog-url-normalizer-plugin",
-    "description": "A PostHog plugin to normalize the format of urls in your application allowing you to more easily compare them in insights.",
+    "name": "ph-shotgun-processevent-app",
+    "url": "https://github.com/lamothearthur/ph-shotgun-processevent-app",
+    "description": "A custom app to rename specific event names during the migration of Shotgun events from US to EU",
     "main": "index.ts",
     "posthogVersion": ">= 1.25.0",
     "config": [
         {
-            "markdown": "Normalize the format of urls in your application allowing you to more easily compare them in insights. By default, this converts all urls to lowercase and strips the trailing slash, overrighting the old `current_url` value."
+            "markdown": "Process and modify specific event properties as they are ingested by PostHog"
         }
     ]
 }

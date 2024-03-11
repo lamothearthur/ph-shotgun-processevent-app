@@ -85,4 +85,44 @@ describe("processEvent", () => {
       "Logged Out"
     );
   });
+
+  it("should rename the event if in the list", () => {
+    const sourceEvent = buildEventWithName("Music Library Sync Completed");
+
+    const processedEvent = processEvent(sourceEvent, getMeta());
+
+    expect(processedEvent?.event).toEqual(
+      "Music Library Sync Completed"
+    );
+  });
+
+  it("should rename the event if in the list", () => {
+    const sourceEvent = buildEventWithName("Non Existing Event");
+
+    const processedEvent = processEvent(sourceEvent, getMeta());
+
+    expect(processedEvent?.event).toEqual(
+      "Non Existing Event"
+    );
+  });
+
+  it("should rename the event if in the list", () => {
+    const sourceEvent = buildEventWithName("KYB Completed");
+
+    const processedEvent = processEvent(sourceEvent, getMeta());
+
+    expect(processedEvent?.event).toEqual(
+      "KYB Completed"
+    );
+  });
+
+  it("should rename the event if in the list", () => {
+    const sourceEvent = buildEventWithName("Reward Score Explanation Sheet Displayed");
+
+    const processedEvent = processEvent(sourceEvent, getMeta());
+
+    expect(processedEvent?.event).toEqual(
+      "Reward Score Explanation Sheet Displayed"
+    );
+  });
 });
